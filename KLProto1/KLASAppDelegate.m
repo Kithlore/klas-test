@@ -7,11 +7,15 @@
 //
 
 #import "KLASAppDelegate.h"
+#import <Parse/Parse.h>
 
 @implementation KLASAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    [Parse setApplicationId:@"IUfNZb2RHSaED5yVz6mb1V4OryMoXkLd7nRuKH9L"
+                  clientKey:@"xLgIkFMD5pXbHAwI5MwGLNAMfpYr3LIr0jBNfVlh"];
+    [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
     // Override point for customization after application launch.
     return YES;
 }
